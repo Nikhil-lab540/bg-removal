@@ -34,13 +34,13 @@ hide_streamlit_style()
 def fix_image(upload):
     st.write('Original Image')
     image = Image.open(upload)
-    st.image(image, caption="Original Image", use_column_width=True)
+    st.image(image, caption="Original Image", use_container_width=True)
 
     with st.spinner("Removing background..."):
         fixed = remove(image)
 
     st.write("Fixed Image")
-    st.image(fixed, caption="Fixed Image", use_column_width=True)
+    st.image(fixed, caption="Fixed Image", use_container_width=True)
 
     # Add download button for the fixed image
     st.sidebar.markdown('\n')
